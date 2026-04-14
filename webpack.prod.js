@@ -4,10 +4,15 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export default merge(common, {
     mode: "production",
+    optimization: {
+        splitChunks: {
+            chunks: "all",
+        },
+    },
     module: {
         rules: [
             {
-                test: /\.scss$/i,
+                test: /\.(scss|css)$/i,
                 use: [
                     MiniCssExtractPlugin.loader, // extract CSS
                     "css-loader",

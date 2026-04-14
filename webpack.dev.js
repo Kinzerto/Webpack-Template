@@ -7,7 +7,7 @@ export default merge(common, {
     module: {
         rules: [
             {
-                test: /\.scss$/i,
+                test: /\.(scss|css)$/i,
                 use: [
                     "style-loader",
                     "css-loader",
@@ -18,5 +18,6 @@ export default merge(common, {
     },
     devServer: {
         watchFiles: ["./src/template.html"],
+        historyApiFallback: true,
     },
 });
