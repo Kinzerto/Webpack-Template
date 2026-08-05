@@ -1,8 +1,9 @@
-import { greetings } from './welcome.js';
 import './style.scss';
+
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.textContent = greetings;
+  document.body.textContent = 'Hello Mate!';
 });
 
 const have = () => 'kin';
+
 console.log(have);
