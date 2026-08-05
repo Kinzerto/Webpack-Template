@@ -14,7 +14,18 @@ export default defineConfig([
         ...globals.node,
       },
     },
-    rules: {},
+    rules: {
+      'no-unused-vars': 'warn',
+    },
+  },
+
+  {
+    files: ['**/*.test.js'],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
+    },
   },
 
   eslintPluginPrettier,
